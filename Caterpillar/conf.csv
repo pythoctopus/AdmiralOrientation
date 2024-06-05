@@ -1,8 +1,0 @@
-preprocess,1
-working_dir,directory-containig-video-directory
-video_name,all
-video_dir,video-directory
-mode,2
-make_track,1
-make_video,1
-use_gpu,1
