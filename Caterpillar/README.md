@@ -54,7 +54,7 @@ If all of these parameters are filled correctly, everything should work just fin
 
 To run the model you just need to run a Python script
 
->[!NOTE]
+>[!WARNING]
 >YOU NEED pytorch, openCV, and tqdm installed
 
 The configuration file can be feeded as a command line argument. If this option is ignored, the default file is __'conf.csv'__ in the script directory.
