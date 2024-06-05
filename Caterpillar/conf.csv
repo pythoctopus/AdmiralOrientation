@@ -1,0 +1,8 @@
+preprocess,1
+working_dir,/media/thed/HDD/Rybachy/RandomWalk
+video_name,all
+video_dir,RealTracks
+mode,2
+make_track,1
+make_video,1
+use_gpu,1
