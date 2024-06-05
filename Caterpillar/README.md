@@ -61,13 +61,16 @@ The configuration file can be feeded as a command line argument. If this option 
 
 E.g you can run the script as:
 ```bash
-python path-to-file/catterpillar.py path-to-conf
+python script-directory/catterpillar.py path-to-conf
 ```
 or
 ```bash
-python path-to-file/catterpillar.py
+python script-directory/catterpillar.py
 ```
-
+The latter is equal to:
+```bash
+python script-directory/catterpillar.py script-directory/conf.csv
+```
 The script will ask you to:
 
 1) select a region of interest for each video
