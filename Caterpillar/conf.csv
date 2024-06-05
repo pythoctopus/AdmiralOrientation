@@ -1,7 +1,7 @@
 preprocess,1
-working_dir,/media/thed/HDD/Rybachy/RandomWalk
+working_dir,directory-containig-video-directory
 video_name,all
-video_dir,RealTracks
+video_dir,video-directory
 mode,2
 make_track,1
 make_video,1
