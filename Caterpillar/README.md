@@ -52,16 +52,21 @@ __________________________________________________________________________
 ```
 If all of these parameters are filled correctly, everything should work just fine.
 
-To run the model you just need to run a Python script (YOU NEED pytorch, openCV,
-and tqdm installed). Conf file is supposed to be in the same directory as the script and this exact directory is supposed to be the working directory.
-Otherwise feel free to add something like:
-```python
-if __name__ == '__main__':
-  wdir = sys.argv[1]
-  os.chdir(wdir)
-  # ... all the stuff already inside ....
+To run the model you just need to run a Python script
+
+>[!NOTE]
+>YOU NEED pytorch, openCV, and tqdm installed
+
+The configuration file can be feeded as a command line argument. If this option is ignored, the default file is __'conf.csv'__ in the script directory.
+
+E.g you can run the script as:
+```bash
+python path-to-file/catterpillar.py path-to-conf
 ```
-(or smth similar)
+or
+```bash
+python path-to-file/catterpillar.py
+```
 
 The script will ask you to:
 
