@@ -1,4 +1,8 @@
 # AdmiralOrientation
+This repository contains the code for recording the red admiral orientation from videos in the Mouritsen-Frost flight simulator. It contains two folders:
+Caterpillar includes actual model
+Training includes data for ANN training and validation
+## Model description
 In order to analyze the behavior of the red admiral from video recordings, we employed a two-step approach. First, we divided the behaviors of the butterflies into two subcategories: active fluttering flight and passive hanging inside the flight simulator. The regions of interest where the butterfly exhibited active flight were later analyzed using a ResNet18-based CNN to determine the animal's orientation. The summary of the model is depicted below:
 ![admiral_model](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/e747bb69-3890-4572-8a13-1d61ce6474bd)
 
@@ -9,4 +13,8 @@ At the first stage, the original recording (a) is cropped to the region of inter
 >![bfl](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/00c41998-cede-4524-b30e-912d5e8071d2)
 
 ## CNN
-We used a pretrained ResNet18 with a custom 
+We used a pre-trained ResNet18 with a modified linear classifier for determining the angle of butterfly orientation. The code for model training is located inside the __Training__ directory.
+The model shows slightly worse results than a human. The dispersion (i.e. the angular difference between two attempts to label the same frame or the difference between the model and a human) after the re-labelling the frames of the test dataset is lower:
+![validation](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/1043b0d3-9633-4bc3-8bd1-788eb59d418d)
+The histograms above depict the distripution of angular differences (degrees) for the model and a trained human. The final result, despite being less accurate than a human, remains convincing:
+![example](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/7cd098a7-5048-461b-971a-b4265b4dbaa8)
