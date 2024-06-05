@@ -1,10 +1,15 @@
 import os
 import sys
+from inspect import getsourcefile
 import pandas as pd
 import torch
 from tqdm import tqdm
 
-modules_path = os.path.join(os.getcwd(), 'modules')
+desired_wd = os.path.dirname(getsourcefile(lambda : 0))
+os.chdir(desired_wd)
+
+modules_path = os.path.join(desired_wd, 'modules')
+
 if modules_path not in sys.path:
     sys.path.append(modules_path)
 
@@ -18,7 +23,7 @@ class Caterpillar:
         self.model = ModResNet18(2, custom_classifier=True)
         self.model.load_state_dict(torch.load(sd_path))
 
-        self.params = pd.read_csv('conf.csv', header=None, index_col=0)
+        self.params = pd.read_csv(conf_path, header=None, index_col=0)
         wd = self.params.loc['working_dir', 1]
         os.chdir(wd)
 
@@ -220,5 +225,10 @@ if __name__ == '__main__':
                  'show': True
                  }
 
-    cpl = Caterpillar('conf.csv', fd_kwargs)
+    try:
+        conf_path = sys.argv[1]
+    except IndexError:
+        conf_path = 'conf.csv'
+
+    cpl = Caterpillar(conf_path, fd_kwargs)
     cpl.run()
