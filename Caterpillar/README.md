@@ -1,4 +1,4 @@
-# AdmiralOrientation
+# Caterpillar Script
 ANN approach for butterfly orientation measurement inside a Mouritsen-Frost flight simulator
 
 So I will try to make a little description. I sincerely hope one day someone
