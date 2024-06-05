@@ -54,6 +54,7 @@ def detect_flight(arr, name, times, window_size=50, percent=99, show=0):
     f, ax = plt.subplots(figsize=(20, 5))
     ax.plot(times[:-window_size], arr[:-window_size] + 100, 'black')
     ax.plot(times[:-window_size], lbs*50)
+    ax.set_title(name)
     ax.grid()
     plt.savefig(name, dpi=120)
     if show:
