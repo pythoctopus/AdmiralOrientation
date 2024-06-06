@@ -14,7 +14,7 @@ At the first stage, the original recording (**a**) is cropped to the region of i
 
 ## CNN
 We used a pre-trained ResNet18 with a modified linear classifier for determining the angle of butterfly orientation. The code for model training is located inside the __Training__ directory.
-The model shows slightly worse results than a human. The dispersion (i.e. the angular difference between two attempts to label the same frame or the difference between the model and a human) after the re-labelling the frames of the test dataset is lower:
+The model shows slightly worse results than a human. The dispersion (i.e. the angular difference between two attempts to label the same frame or the difference between the model and a human) for re-labelling the frames of the test dataset (human error) is lower than model-human dispersion (model error):
 ![validation](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/1043b0d3-9633-4bc3-8bd1-788eb59d418d)
 The histograms above depict the distribution of angular differences (degrees) for the model and a trained human. The final result, despite being less accurate than a human, remains convincing: </br>
 ![example](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/7cd098a7-5048-461b-971a-b4265b4dbaa8)
