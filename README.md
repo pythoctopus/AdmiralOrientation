@@ -1,7 +1,7 @@
 # AdmiralOrientation
 This repository contains the code for recording the red admiral orientation from videos in the Mouritsen-Frost flight simulator. It contains two folders:
-* __Caterpillar__ includes actual model
-* __Training__ includes data for ANN training and validation
+* __Caterpillar__ contains the actual model
+* __Training__ contains data for ANN training and validation
 ## Model description
 In order to analyze the behavior of the red admiral from video recordings, we employed a two-step approach. First, we divided the behaviors of the butterflies into two subcategories: active fluttering flight and passive hanging inside the flight simulator. The regions of interest where the butterfly exhibited active flight were later analyzed using an adjusted ResNet18 CNN to determine the animal's orientation. The summary of the model is depicted below:
 ![admiral_model](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/e747bb69-3890-4572-8a13-1d61ce6474bd)
