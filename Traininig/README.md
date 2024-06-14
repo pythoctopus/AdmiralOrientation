@@ -5,7 +5,6 @@ The model is ResNet18 with a modified linear classifier. The model was trained o
 
 ### Training
 
-All the data (including the test dataset) is located under the **TrainDataset** directory. Training and evaluation loss is stored under the **runs** directory of the tensorboard writer implemented in PyTorch (also in the plot below).
+All the data (including the test dataset) is located under the **TrainDataset** directory. Training and evaluation loss is stored under the **runs** directory of the tensorboard writer implemented in PyTorch (**also at the plot below**).
 We trained the model for 500 epochs with a batch size of 40 and an lr parameter of 10**-3. We used L1Loss and Adam optimizer.
-
 ![Loss](https://github.com/pythoctopus/AdmiralOrientation/assets/56726936/928e6f67-aa7f-49cb-a82a-fad5b4550b53)
